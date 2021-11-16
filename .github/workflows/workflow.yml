@@ -33,7 +33,7 @@ jobs:
 
       # invalidates cache to update website with newly synced build files form s3
       - uses: chetan/invalidate-cloudfront-action@v2
-      - env:
+        env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
           PATHS: '/*'
           AWS_REGION: 'us-east-2'
